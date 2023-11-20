@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/breeze/static/css/main.ca01e2d3.css",
+    "main.js": "/breeze/static/js/main.1f4933d2.js",
+    "index.html": "/breeze/index.html",
+    "main.ca01e2d3.css.map": "/breeze/static/css/main.ca01e2d3.css.map",
+    "main.1f4933d2.js.map": "/breeze/static/js/main.1f4933d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca01e2d3.css",
+    "static/js/main.1f4933d2.js"
+  ]
+}
