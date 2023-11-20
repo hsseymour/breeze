@@ -1,6 +1,6 @@
 const CurrentResultWidget = ({ result }) => {
   return (
-    <div>
+    <div id="currentResultDiv">
       <h4>Current weather:</h4>
       <ul>
         <li>

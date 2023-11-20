@@ -1,8 +1,89 @@
-div {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.inlineLI {
-  display: inline-block;
-  width: 100px;
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-x: hidden;
+  justify-content: center;
+  padding: 2%;
+
+  #locationDiv {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    label {
+      display: block;
+    }
+
+    button {
+      flex: 0 0 40%;
+    }
+
+    div {
+      flex: 0 0 75%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  #currentResultDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  #dailyResultDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      flex-wrap: nowrap;
+      overflow: scroll;
+
+      li {
+        flex: 0 0 150px;
+      }
+    }
+  }
+
+  #hourlyResultDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      flex-wrap: nowrap;
+      overflow: scroll;
+
+      li {
+        flex: 0 0 150px;
+      }
+    }
+  }
 }

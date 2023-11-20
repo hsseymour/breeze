@@ -7,7 +7,7 @@ import {
   LocationSearchBar,
 } from "../components/composites";
 
-const ChangePosition = ({ setCoordinates }) => {
+const ChangeLocation = ({ setCoordinates }) => {
   console.warn("CHANGE RERENDER");
   const [isCoordinates, setisCoordinates] = useState(false);
 
@@ -25,25 +25,20 @@ const ChangePosition = ({ setCoordinates }) => {
 
   return (
     <div>
-      <div>
-        <Button type="button" onClick={toggleIsCoordinates}>
-          {isCoordinates ? "use location" : "use coordinates"}
-        </Button>
-      </div>
-      <div>
-        {isCoordinates ? (
-          <LocationCoordinateForm {...{ setCoordinates }} />
-        ) : (
-          <LocationSearchBar {...{ setCoordinates }} />
-        )}
-      </div>
-      <div>
-        <Button onClick={() => getUserLocation(handleUserLocation)}>
-          Use your location
-        </Button>
-      </div>
+      <Button type="button" onClick={toggleIsCoordinates}>
+        {isCoordinates ? "use location" : "use coordinates"}
+      </Button>
+      <Button onClick={() => getUserLocation(handleUserLocation)}>
+        Use your location
+      </Button>
+
+      {isCoordinates ? (
+        <LocationCoordinateForm {...{ setCoordinates }} />
+      ) : (
+        <LocationSearchBar {...{ setCoordinates }} />
+      )}
     </div>
   );
 };
 
-export default ChangePosition;
+export default ChangeLocation;

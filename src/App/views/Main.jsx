@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ChangePosition, CurrentResult, DailyResult } from ".";
+import { ChangeLocation, CurrentResult, DailyResult } from ".";
 import { ShowLocationTitle } from "../components/composites";
 
 const Main = () => {
@@ -8,14 +8,16 @@ const Main = () => {
   const [coordinates, setCoordinates] = useState(null);
 
   return (
-    <div>
-      <ChangePosition {...{ setCoordinates }} />
+    <div id="mainDiv">
+      <div id="locationDiv">
+        <ChangeLocation {...{ setCoordinates }} />
+        {coordinates && <ShowLocationTitle {...{ coordinates }} />}
+      </div>
       {coordinates && (
-        <div>
-          <ShowLocationTitle {...{ coordinates }} />
+        <>
           <CurrentResult {...{ coordinates }} />
           <DailyResult {...{ coordinates }} />
-        </div>
+        </>
       )}
     </div>
   );

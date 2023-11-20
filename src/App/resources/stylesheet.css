@@ -1,8 +1,77 @@
-div {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.inlineLI {
-  display: inline-block;
-  width: 100px;
+#mainDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-x: hidden;
+  justify-content: center;
+  padding: 2%;
+}
+#mainDiv #locationDiv {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#mainDiv #locationDiv label {
+  display: block;
+}
+#mainDiv #locationDiv button {
+  flex: 0 0 40%;
+}
+#mainDiv #locationDiv div {
+  flex: 0 0 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+#mainDiv #currentResultDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainDiv #currentResultDiv ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#mainDiv #dailyResultDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainDiv #dailyResultDiv ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+#mainDiv #dailyResultDiv ul li {
+  flex: 0 0 150px;
+}
+#mainDiv #hourlyResultDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainDiv #hourlyResultDiv ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+#mainDiv #hourlyResultDiv ul li {
+  flex: 0 0 150px;
 }/*# sourceMappingURL=stylesheet.css.map */

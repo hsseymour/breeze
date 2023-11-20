@@ -4,7 +4,8 @@ const ShowLocationTitle = ({ coordinates }) => {
     <div>
       {name && <h2>{name}</h2>}
       <h3>
-        Latitude: {lat} Longitude: {long}
+        <span>Latitude: {lat} </span>
+        <span>Longitude: {long}</span>
       </h3>
     </div>
   );
