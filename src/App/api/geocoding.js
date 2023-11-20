@@ -1,5 +1,5 @@
-import { GEOCODING_ROOT, GEOCODING_VARABLES } from "../resources/variables";
-import { api } from "./";
+import { GEOCODING_ROOT, GEOCODING_VARABLES } from "../resources/constants";
+import { api } from ".";
 
 const geocoding = () =>
   api({

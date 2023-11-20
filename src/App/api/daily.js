@@ -1,5 +1,5 @@
-import { WEATHER_ROOT, DAILY_VARIABLES } from "../resources/variables";
-import { api } from "./";
+import { WEATHER_ROOT, DAILY_VARIABLES } from "../resources/constants";
+import { api } from ".";
 
 const daily = () =>
   api({

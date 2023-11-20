@@ -1,5 +1,5 @@
-import { WEATHER_ROOT, HOURLY_VARIABLES } from "../resources/variables";
-import { api } from "./";
+import { WEATHER_ROOT, HOURLY_VARIABLES } from "../resources/constants";
+import { api } from ".";
 
 const hourly = () =>
   api({
