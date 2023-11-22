@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/breeze/static/css/main.ca01e2d3.css",
-    "main.js": "/breeze/static/js/main.1f4933d2.js",
+    "main.css": "/breeze/static/css/main.a6c23fb8.css",
+    "main.js": "/breeze/static/js/main.d8eea7db.js",
     "index.html": "/breeze/index.html",
-    "main.ca01e2d3.css.map": "/breeze/static/css/main.ca01e2d3.css.map",
-    "main.1f4933d2.js.map": "/breeze/static/js/main.1f4933d2.js.map"
+    "main.a6c23fb8.css.map": "/breeze/static/css/main.a6c23fb8.css.map",
+    "main.d8eea7db.js.map": "/breeze/static/js/main.d8eea7db.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca01e2d3.css",
-    "static/js/main.1f4933d2.js"
+    "static/css/main.a6c23fb8.css",
+    "static/js/main.d8eea7db.js"
   ]
 }
