@@ -4,74 +4,92 @@
   box-sizing: border-box;
 }
 
-#mainDiv {
+li {
+  list-style-type: none;
+}
+
+.flexCol {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  overflow-x: hidden;
-  justify-content: center;
-  padding: 2%;
 }
-#mainDiv #locationDiv {
-  flex: 0 0 100%;
+
+.flexRow {
   display: flex;
   flex-direction: row;
+  max-width: 92vw;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.noWrap {
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.flexChild-90 {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 90%;
+}
+
+.flexChild-75 {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 75%;
+}
+
+.flexChild-45p {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 45%;
+}
+
+.flexChild-150x {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 150px;
+}
+
+.flexChild-200x {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
+.small-gap {
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
-#mainDiv #locationDiv label {
-  display: block;
+
+.medium-gap {
+  gap: 4%;
 }
-#mainDiv #locationDiv button {
-  flex: 0 0 40%;
+
+.large-gap {
+  gap: 8%;
 }
-#mainDiv #locationDiv div {
-  flex: 0 0 75%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-#mainDiv #currentResultDiv {
-  display: flex;
-  flex-direction: column;
+
+.centerCross {
   align-items: center;
 }
-#mainDiv #currentResultDiv ul {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
+
+.m-m {
+  margin: 4%;
 }
-#mainDiv #dailyResultDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.spaceEven {
+  justify-content: space-evenly;
 }
-#mainDiv #dailyResultDiv ul {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: nowrap;
-  overflow: scroll;
+
+.searchResult {
+  background-color: lightgray;
+  border: 1px solid black;
+  width: 95%;
+  margin: 2px auto;
+  padding: 5px;
 }
-#mainDiv #dailyResultDiv ul li {
-  flex: 0 0 150px;
-}
-#mainDiv #hourlyResultDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#mainDiv #hourlyResultDiv ul {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: nowrap;
-  overflow: scroll;
-}
-#mainDiv #hourlyResultDiv ul li {
-  flex: 0 0 150px;
+
+.searchResult:active {
+  background-color: gray;
 }/*# sourceMappingURL=stylesheet.css.map */

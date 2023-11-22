@@ -1,12 +1,10 @@
 const ShowLocationTitle = ({ coordinates }) => {
   const { name, lat, long } = coordinates;
   return (
-    <div>
+    <div className="flexCol wrap">
       {name && <h2>{name}</h2>}
-      <h3>
-        <span>Latitude: {lat} </span>
-        <span>Longitude: {long}</span>
-      </h3>
+      <p>Latitude: {lat}</p>
+      <p>Longitude: {long}</p>
     </div>
   );
 };

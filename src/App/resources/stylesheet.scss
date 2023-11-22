@@ -1,89 +1,96 @@
+$small: 20px;
+$medium: 4%;
+$large: 8%;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#mainDiv {
+li {
+  list-style-type: none;
+}
+
+.flexCol {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  overflow-x: hidden;
-  justify-content: center;
-  padding: 2%;
+}
 
-  #locationDiv {
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  max-width: 92vw;
+}
 
-    label {
-      display: block;
-    }
+.wrap {
+  flex-wrap: wrap;
+}
+.noWrap {
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
 
-    button {
-      flex: 0 0 40%;
-    }
+.flexChild-90 {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 90%;
+}
 
-    div {
-      flex: 0 0 75%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-  }
+.flexChild-75 {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 75%;
+}
 
-  #currentResultDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.flexChild-45p {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 45%;
+}
 
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-  }
+.flexChild-150x {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 150px;
+}
 
-  #dailyResultDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.flexChild-200x {
+  flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
 
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      flex-wrap: nowrap;
-      overflow: scroll;
+.small-gap {
+  gap: $small;
+}
+.medium-gap {
+  gap: $medium;
+}
+.large-gap {
+  gap: $large;
+}
 
-      li {
-        flex: 0 0 150px;
-      }
-    }
-  }
+.centerCross {
+  align-items: center;
+}
 
-  #hourlyResultDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.m-m {
+  margin: $medium;
+}
 
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      flex-wrap: nowrap;
-      overflow: scroll;
+.spaceEven {
+  justify-content: space-evenly;
+}
 
-      li {
-        flex: 0 0 150px;
-      }
-    }
-  }
+.searchResult {
+  background-color: lightgray;
+  border: 1px solid black;
+  width: 95%;
+  margin: 2px auto;
+  padding: 5px;
+}
+
+.searchResult:active {
+  background-color: gray;
 }

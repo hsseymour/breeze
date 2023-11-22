@@ -1,10 +1,6 @@
 import "./resources/stylesheet.css";
 import { Main } from "./views";
 
-const App = () => (
-  <div>
-    <Main />
-  </div>
-);
+const App = () => <Main />;
 
 export default App;

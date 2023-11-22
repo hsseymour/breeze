@@ -1,11 +1,11 @@
 const HourlyResultWidget = ({ result }) => {
   console.warn("HOURLY WIDGET RERENDER");
   return (
-    <div id="hourlyResultDiv">
+    <div>
       <h4>Hourly weather for {result.hourly.time[0].split("T")[0]}:</h4>
-      <ul>
+      <ul className="flexRow noWrap">
         {result.hourly.time.map((item, index) => (
-          <li key={index}>
+          <li key={index} className="flexChild-200x medium-gap">
             <h6>
               {new Date(item).toLocaleTimeString([], {
                 hour: "2-digit",
