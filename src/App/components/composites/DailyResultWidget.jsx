@@ -13,11 +13,10 @@ const DailyResultWidget = ({ result, setHourlyArgs }) => {
   return (
     <div>
       <h4>Daily weather:</h4>
-      <ul className="flexRow noWrap">
+      <ul>
         {result.daily.time.map((item, index) => (
           <li
             key={index}
-            className="flexChild-150x medium-gap"
             onClick={() =>
               setHourlyArgs((prevState) => {
                 return { ...prevState, start: item, end: item };

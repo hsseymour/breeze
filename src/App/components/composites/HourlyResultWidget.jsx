@@ -3,9 +3,9 @@ const HourlyResultWidget = ({ result }) => {
   return (
     <div>
       <h4>Hourly weather for {result.hourly.time[0].split("T")[0]}:</h4>
-      <ul className="flexRow noWrap">
+      <ul>
         {result.hourly.time.map((item, index) => (
-          <li key={index} className="flexChild-200x medium-gap">
+          <li key={index}>
             <h6>
               {new Date(item).toLocaleTimeString([], {
                 hour: "2-digit",

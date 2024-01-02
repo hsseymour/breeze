@@ -8,8 +8,8 @@ const Main = () => {
   const [coordinates, setCoordinates] = useState(null);
 
   return (
-    <div className="flexCol centerCross m-m small-gap">
-      <div className="flexRow wrap small-gap ">
+    <div>
+      <div>
         <ChangeLocation {...{ setCoordinates }} />
         {coordinates && <ShowLocationTitle {...{ coordinates }} />}
       </div>

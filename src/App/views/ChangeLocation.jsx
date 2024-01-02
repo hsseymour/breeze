@@ -24,19 +24,12 @@ const ChangeLocation = ({ setCoordinates }) => {
   };
 
   return (
-    <div className="flexCol noWrap">
-      <div className="flexRow wrap spaceEven">
-        <Button
-          classes={"flexChild-45p"}
-          type="button"
-          onClick={toggleIsCoordinates}
-        >
+    <div>
+      <div>
+        <Button type="button" onClick={toggleIsCoordinates}>
           {isCoordinates ? "use location" : "use coordinates"}
         </Button>
-        <Button
-          classes={"flexChild-45p"}
-          onClick={() => getUserLocation(handleUserLocation)}
-        >
+        <Button onClick={() => getUserLocation(handleUserLocation)}>
           Use your location
         </Button>
       </div>
