@@ -1,5 +1,162 @@
+$page_background_color: #111111;
+$content_background_color: #111111;
+$search_result_background_color: #ddd;
+$search_result_hover_color: #aaa;
+$header_font_color: #111111;
+$body_font_color: #111111;
+$primary_button_color: #ccc;
+$secondary_button_color: #eee;
+$button_hover_color: #aaa;
+$default_border_color: #000;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.labels {
+}
+
+.inputs {
+  padding: 0px 0px 0px 10px;
+}
+
+.buttons {
+  padding: 3px 10px;
+  background-color: $primary_button_color;
+  border: 1px solid $default_border_color;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button_hover_color;
+  }
+}
+
+.heading {
+}
+
+.locationDiv {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+
+  .changeLocationDiv {
+    gap: 15px;
+    padding: 10px;
+    border: 2px solid $default_border_color;
+
+    .locationButtonDiv {
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .locationInputsDiv,
+    .locationInputsForm {
+      gap: 5px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .labels {
+        display: block;
+      }
+
+      .inputs {
+        float: right;
+        width: 60%;
+      }
+
+      .buttons {
+      }
+
+      .resultsList {
+        margin: 5px 0px;
+
+        .searchResult {
+          background-color: $search_result_background_color;
+          border: 1px solid $default_border_color;
+          margin: -1px 0px;
+          padding: 0px 0px 0px 15px;
+          list-style-type: none;
+          width: 100%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $search_result_hover_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.currentWeatherDiv {
+  background-color: white;
+  margin: 15px 3%;
+  border: 1px solid $default_border_color;
+  padding: 10px;
+
+  .resultsContainer {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    .currentResultCard {
+      border: 1px solid $default_border_color;
+      width: 15%;
+      min-width: 90px;
+      height: 70px;
+      padding: 10px;
+
+      .title {
+      }
+      .text {
+        .data {
+        }
+        .units {
+        }
+      }
+    }
+  }
+}
+
+.dailyAndHourlyResultsDiv {
+  margin: 15px 3%;
+  border: 1px solid $default_border_color;
+  padding: 10px;
+
+  .dailyResultsDiv {
+    background-color: lightblue;
+
+    .resultsContainer {
+      flex-wrap: nowrap;
+      overflow: auto;
+      gap: 10px;
+      // justify-content: space-evenly;
+      width: 100%;
+
+      .dailyResultsCard {
+        border: 1px solid $default_border_color;
+        padding: 10px;
+        background-color: lightcoral;
+      }
+    }
+  }
+
+  .hourlyResultsDiv {
+    background-color: lightgray;
+  }
 }

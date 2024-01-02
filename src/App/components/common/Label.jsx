@@ -1,6 +1,6 @@
-const Label = ({ classes, children, ...props }) => {
+const Label = ({ classes = "", children, ...props }) => {
   return (
-    <label className={`${classes}`} {...props}>
+    <label className={`labels ${classes}`} {...props}>
       {children}
     </label>
   );

@@ -1,7 +1,6 @@
 const HourlyResultWidget = ({ result }) => {
-  console.warn("HOURLY WIDGET RERENDER");
   return (
-    <div>
+    <div className="hourlyResultsDiv">
       <h4>Hourly weather for {result.hourly.time[0].split("T")[0]}:</h4>
       <ul>
         {result.hourly.time.map((item, index) => (

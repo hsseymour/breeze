@@ -11,7 +11,10 @@ const LocationCoordinateForm = ({ setCoordinates }) => {
   };
 
   return (
-    <form onSubmit={handleCoordinateFormSubmit}>
+    <form
+      className="locationInputsForm flexCol"
+      onSubmit={handleCoordinateFormSubmit}
+    >
       <Label>
         Enter Latitude:
         <Input type="text" name="setLatitude" placeholder="Latitude..." />

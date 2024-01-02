@@ -4,7 +4,6 @@ import { current } from "../api";
 import CurrentResultWidget from "../components/composites/CurrentResultWidget";
 
 const CurrentResult = ({ coordinates }) => {
-  console.warn("CURRENT RERENDER");
   const [currentResult, setCurrentResult] = useState(null);
 
   useEffect(() => {

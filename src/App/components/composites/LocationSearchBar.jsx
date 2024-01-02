@@ -25,27 +25,29 @@ const LocationSearchBar = ({ setCoordinates }) => {
   };
 
   return (
-    <Label>
-      Enter Location:
-      <Input
-        type="text"
-        name="setLocation"
-        placeholder="Search..."
-        onChange={(e) => setLocation(e.target.value)}
-      />
-      {searchResults && (
-        <ul>
-          {searchResults.map((result) => (
-            <SearchResult
-              key={result.id}
-              onClick={() => searchResultSelected(result)}
-            >
-              {result.name} [{result.admin1}]
-            </SearchResult>
-          ))}
-        </ul>
-      )}
-    </Label>
+    <div className="locationInputsDiv flexCol">
+      <Label>
+        Enter Location:
+        <Input
+          type="text"
+          name="setLocation"
+          placeholder="Search..."
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        {searchResults && (
+          <ul className="resultsList">
+            {searchResults.map((result) => (
+              <SearchResult
+                key={result.id}
+                onClick={() => searchResultSelected(result)}
+              >
+                {result.name} [{result.admin1}]
+              </SearchResult>
+            ))}
+          </ul>
+        )}
+      </Label>
+    </div>
   );
 };
 
