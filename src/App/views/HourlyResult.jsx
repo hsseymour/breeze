@@ -3,7 +3,6 @@ import { hourly } from "../api";
 import { HourlyResultWidget } from "../components/composites";
 
 const HourlyResult = ({ hourlyArgs }) => {
-  console.warn("HOURLY RERENDER");
   const [hourlyResult, setHourlyResult] = useState(null);
 
   useEffect(() => {
@@ -13,7 +12,6 @@ const HourlyResult = ({ hourlyArgs }) => {
       },
     }).then((data) => {
       setHourlyResult(data);
-      console.log("data");
     });
   }, [hourlyArgs]);
 

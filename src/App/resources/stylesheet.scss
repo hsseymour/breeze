@@ -1,6 +1,13 @@
-$small: 20px;
-$medium: 4%;
-$large: 8%;
+$page_background_color: #111111;
+$content_background_color: #111111;
+$search_result_background_color: #ddd;
+$search_result_hover_color: #aaa;
+$header_font_color: #111111;
+$body_font_color: #111111;
+$primary_button_color: #ccc;
+$secondary_button_color: #eee;
+$button_hover_color: #aaa;
+$default_border_color: #000;
 
 * {
   margin: 0;
@@ -8,93 +15,164 @@ $large: 8%;
   box-sizing: border-box;
 }
 
-li {
-  list-style-type: none;
-}
-
 .flexCol {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
 }
 
 .flexRow {
   display: flex;
   flex-direction: row;
-  max-width: 92vw;
-  width: 100%;
-  height: 100%;
 }
 
-.wrap {
+.labels {
+}
+
+.inputs {
+  padding: 0px 0px 0px 10px;
+}
+
+.buttons {
+  padding: 3px 10px;
+  background-color: $primary_button_color;
+  border: 1px solid $default_border_color;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button_hover_color;
+  }
+}
+
+.heading {
+}
+
+.locationDiv {
   flex-wrap: wrap;
-}
-.noWrap {
-  flex-wrap: nowrap;
-  overflow: scroll;
-}
-
-.flexChild-90 {
-  flex-shrink: 0;
-  flex-shrink: 0;
-  flex-basis: 90%;
-}
-
-.flexChild-75 {
-  flex-shrink: 0;
-  flex-shrink: 0;
-  flex-basis: 75%;
-}
-
-.flexChild-45p {
-  flex-shrink: 0;
-  flex-shrink: 0;
-  flex-basis: 45%;
-}
-
-.flexChild-150x {
-  flex-shrink: 0;
-  flex-shrink: 0;
-  flex-basis: 150px;
-}
-
-.flexChild-200x {
-  flex-shrink: 0;
-  flex-shrink: 0;
-  flex-basis: 200px;
-}
-
-.small-gap {
-  gap: $small;
-}
-.medium-gap {
-  gap: $medium;
-}
-.large-gap {
-  gap: $large;
-}
-
-.centerCross {
+  justify-content: center;
   align-items: center;
+  gap: 25px;
+  padding: 10px;
+
+  .changeLocationDiv {
+    gap: 15px;
+    padding: 10px;
+    border: 2px solid $default_border_color;
+
+    .locationButtonDiv {
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .locationInputsDiv,
+    .locationInputsForm {
+      gap: 5px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .labels {
+        display: block;
+      }
+
+      .inputs {
+        float: right;
+        width: 60%;
+      }
+
+      .buttons {
+      }
+
+      .resultsList {
+        margin: 5px 0px;
+
+        .searchResult {
+          background-color: $search_result_background_color;
+          border: 1px solid $default_border_color;
+          margin: -1px 0px;
+          padding: 0px 0px 0px 15px;
+          list-style-type: none;
+          width: 100%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $search_result_hover_color;
+          }
+        }
+      }
+    }
+  }
 }
 
-.m-m {
-  margin: $medium;
+.currentWeatherDiv {
+  background-color: white;
+  margin: 15px 3%;
+  border: 1px solid $default_border_color;
+  padding: 10px;
+
+  .resultsContainer {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    .currentResultCard {
+      border: 1px solid $default_border_color;
+      width: 15%;
+      min-width: 90px;
+      height: 70px;
+      padding: 10px;
+
+      .title {
+      }
+      .text {
+        .data {
+        }
+        .units {
+        }
+      }
+    }
+  }
 }
 
-.spaceEven {
-  justify-content: space-evenly;
-}
+.dailyAndHourlyResultsDiv {
+  margin: 15px 3%;
+  border: 1px solid $default_border_color;
+  padding: 10px;
 
-.searchResult {
-  background-color: lightgray;
-  border: 1px solid black;
-  width: 95%;
-  margin: 2px auto;
-  padding: 5px;
-}
+  .dailyResultsDiv {
+    .resultsContainer {
+      flex-wrap: nowrap;
+      overflow: auto;
+      gap: 10px;
+      width: 100%;
+      padding: 0px 10px;
 
-.searchResult:active {
-  background-color: gray;
+      .dailyResultsCard {
+        border: 1px solid $default_border_color;
+        padding: 10px;
+        min-width: 210px;
+        cursor: pointer;
+      }
+
+      .selectedDailyCard {
+        border: 3px solid $default_border_color;
+        box-shadow: 0px 0px 15px 1px #000;
+      }
+    }
+  }
+
+  .hourlyResultsDiv {
+    .resultsContainer {
+      flex-wrap: nowrap;
+      overflow: auto;
+      gap: 10px;
+      width: 100%;
+      padding: 0px 10px;
+
+      .hourlyResultsCard {
+        border: 1px solid $default_border_color;
+        padding: 10px;
+        min-width: 210px;
+      }
+    }
+  }
 }

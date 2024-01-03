@@ -1,29 +1,26 @@
+import { CurrentResultCard } from ".";
+import { getDataInfo } from "../../utils";
+
 const CurrentResultWidget = ({ result }) => {
+  const fields = [
+    "temperature_2m",
+    "apparent_temperature",
+    "precipitation",
+    "relative_humidity_2m",
+    "wind_speed_10m",
+    "wind_direction_10m",
+  ];
+
+  const infoFields = getDataInfo(result.current, result.current_units, fields);
+
   return (
-    <div>
-      <h4>Current weather:</h4>
-      <ul className="flexRow wrap">
-        <li className="flexChild-150x medium-gap">
-          Temprature: {result.current["temperature_2m"]}{" "}
-          {result.current_units["temperature_2m"]}
-        </li>
-        <li className="flexChild-150x medium-gap">
-          Humidity: {result.current["relative_humidity_2m"]}{" "}
-          {result.current_units["relative_humidity_2m"]}
-        </li>
-        <li className="flexChild-150x medium-gap">
-          Precipiation: {result.current["precipitation"]}{" "}
-          {result.current_units["precipitation"]}
-        </li>
-        <li className="flexChild-150x medium-gap">
-          Wind Speed: {result.current["wind_speed_10m"]}{" "}
-          {result.current_units["wind_speed_10m"]}
-        </li>
-        <li className="flexChild-150x medium-gap">
-          Wind Direction: {result.current["wind_direction_10m"]}{" "}
-          {result.current_units["wind_direction_10m"]}
-        </li>
-      </ul>
+    <div className="currentWeatherDiv">
+      <h4 className="heading">Current weather:</h4>
+      <div className="resultsContainer flexRow">
+        {infoFields.map((info) => (
+          <CurrentResultCard info={info} />
+        ))}
+      </div>
     </div>
   );
 };

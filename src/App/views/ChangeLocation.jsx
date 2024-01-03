@@ -8,7 +8,6 @@ import {
 } from "../components/composites";
 
 const ChangeLocation = ({ setCoordinates }) => {
-  console.warn("CHANGE RERENDER");
   const [isCoordinates, setisCoordinates] = useState(false);
 
   const toggleIsCoordinates = () => {
@@ -16,7 +15,6 @@ const ChangeLocation = ({ setCoordinates }) => {
   };
 
   const handleUserLocation = (position) => {
-    console.log(position);
     setCoordinates({
       lat: position.coords.latitude,
       long: position.coords.longitude,
@@ -24,19 +22,12 @@ const ChangeLocation = ({ setCoordinates }) => {
   };
 
   return (
-    <div className="flexCol noWrap">
-      <div className="flexRow wrap spaceEven">
-        <Button
-          classes={"flexChild-45p"}
-          type="button"
-          onClick={toggleIsCoordinates}
-        >
+    <div className="changeLocationDiv flexCol">
+      <div className="locationButtonDiv flexRow">
+        <Button type="button" onClick={toggleIsCoordinates}>
           {isCoordinates ? "use location" : "use coordinates"}
         </Button>
-        <Button
-          classes={"flexChild-45p"}
-          onClick={() => getUserLocation(handleUserLocation)}
-        >
+        <Button onClick={() => getUserLocation(handleUserLocation)}>
           Use your location
         </Button>
       </div>

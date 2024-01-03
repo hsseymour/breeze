@@ -1,53 +1,45 @@
+import { useState } from "react";
+import { getDataInfo } from "../../utils";
+import DailyResultsCard from "./DailyResultsCard";
+
 const DailyResultWidget = ({ result, setHourlyArgs }) => {
-  console.warn("DAILY WIDGET RERENDER");
-  const dayOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+  const fields = [
+    "precipitation_probability_max",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "wind_speed_10m_max",
+    "wind_direction_10m_dominant",
   ];
 
+  const [selectedDay, setSelectedDay] = useState(0);
+
   return (
-    <div>
-      <h4>Daily weather:</h4>
-      <ul className="flexRow noWrap">
-        {result.daily.time.map((item, index) => (
-          <li
-            key={index}
-            className="flexChild-150x medium-gap"
-            onClick={() =>
-              setHourlyArgs((prevState) => {
-                return { ...prevState, start: item, end: item };
-              })
-            }
-          >
-            <h5>{dayOfWeek[new Date(item).getDay()]}</h5>
-            <p>
-              {result.daily.precipitation_probability_max[index]}{" "}
-              {result.daily_units.precipitation_probability_max}
-            </p>
-            <p>
-              {result.daily.temperature_2m_max[index]}{" "}
-              {result.daily_units.temperature_2m_max}
-            </p>
-            <p>
-              {result.daily.temperature_2m_min[index]}{" "}
-              {result.daily_units.temperature_2m_min}
-            </p>
-            <p>
-              {result.daily.wind_direction_10m_dominant[index]}{" "}
-              {result.daily_units.wind_direction_10m_dominant}
-            </p>
-            <p>
-              {result.daily.wind_speed_10m_max[index]}{" "}
-              {result.daily_units.wind_speed_10m_max}
-            </p>
-          </li>
-        ))}
-      </ul>
+    <div className="dailyResultsDiv">
+      <h4 className="heading">Daily weather:</h4>
+
+      <div className="resultsContainer flexRow">
+        {result.daily.time.map((item, index) => {
+          let isSelected = index === selectedDay;
+          return (
+            <DailyResultsCard
+              onClick={() => {
+                setSelectedDay(index);
+                setHourlyArgs((prevState) => {
+                  return { ...prevState, start: item, end: item };
+                });
+              }}
+              isSelected={isSelected}
+              date={item}
+              info={getDataInfo(
+                result.daily,
+                result.daily_units,
+                fields,
+                index
+              )}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -5,7 +5,6 @@ import { DailyResultWidget } from "../components/composites";
 import HourlyResult from "./HourlyResult";
 
 const DailyResult = ({ coordinates }) => {
-  console.warn("DAILY RERENDER");
   const [dailyResult, setDailyResult] = useState(null);
   const [hourlyArgs, setHourlyArgs] = useState({
     ...coordinates,
@@ -17,20 +16,19 @@ const DailyResult = ({ coordinates }) => {
     daily({ args: { lat: coordinates.lat, long: coordinates.long } }).then(
       (data) => {
         setDailyResult(data);
-        console.log(data);
       }
     );
   }, [coordinates]);
 
   return (
-    <>
+    <div className="dailyAndHourlyResultsDiv">
       {dailyResult && (
         <>
           <DailyResultWidget result={dailyResult} {...{ setHourlyArgs }} />
           <HourlyResult {...{ hourlyArgs }} />
         </>
       )}
-    </>
+    </div>
   );
 };
 
