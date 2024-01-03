@@ -58,7 +58,8 @@
 .locationDiv .changeLocationDiv .locationInputsDiv .inputs,
 .locationDiv .changeLocationDiv .locationInputsForm .inputs {
   float: right;
-  width: 60%;
+  width: 40vw;
+  max-width: 145px;
 }
 .locationDiv .changeLocationDiv .locationInputsDiv .resultsList,
 .locationDiv .changeLocationDiv .locationInputsForm .resultsList {
@@ -92,7 +93,7 @@
 }
 .currentWeatherDiv .resultsContainer .currentResultCard {
   border: 1px solid #000;
-  width: 15%;
+  width: 30%;
   min-width: 90px;
   height: 70px;
   padding: 10px;
@@ -130,4 +131,13 @@
   border: 1px solid #000;
   padding: 10px;
   min-width: 210px;
+}
+
+@media only screen and (min-width: 715px) {
+  .currentWeatherDiv .resultsContainer {
+    width: 100%;
+  }
+  .currentWeatherDiv .resultsContainer .currentResultCard {
+    width: 15%;
+  }
 }/*# sourceMappingURL=stylesheet.css.map */
