@@ -17,8 +17,8 @@ const CurrentResultWidget = ({ result }) => {
     <div className="currentWeatherDiv">
       <h4 className="heading">Current weather:</h4>
       <div className="resultsContainer flexRow">
-        {infoFields.map((info) => (
-          <CurrentResultCard info={info} />
+        {infoFields.map((info, index) => (
+          <CurrentResultCard key={index} info={info} />
         ))}
       </div>
     </div>

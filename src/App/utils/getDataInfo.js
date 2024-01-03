@@ -15,6 +15,7 @@ const getDataInfo = (resultData, resulUnits, fields, useIndex = false) => {
         return { name: "Wind Direction" };
 
       case "precipitation_probability_max":
+      case "precipitation_probability":
         return { name: "Precipitation Chance" };
       case "temperature_2m_max":
         return { name: "Max Temp" };
