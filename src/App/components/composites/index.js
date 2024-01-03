@@ -6,3 +6,4 @@ export { default as LocationCoordinateForm } from "./LocationCoordinateForm";
 export { default as ShowLocationTitle } from "./ShowLocationTitle";
 export { default as CurrentResultCard } from "./CurrentResultCard";
 export { default as DailyResultsCard } from "./DailyResultsCard";
+export { default as HourlyResultsCard } from "./HourlyResultsCard";

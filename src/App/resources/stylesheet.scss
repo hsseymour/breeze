@@ -139,24 +139,40 @@ $default_border_color: #000;
   padding: 10px;
 
   .dailyResultsDiv {
-    background-color: lightblue;
-
     .resultsContainer {
       flex-wrap: nowrap;
       overflow: auto;
       gap: 10px;
-      // justify-content: space-evenly;
       width: 100%;
+      padding: 0px 10px;
 
       .dailyResultsCard {
         border: 1px solid $default_border_color;
         padding: 10px;
-        background-color: lightcoral;
+        min-width: 210px;
+        cursor: pointer;
+      }
+
+      .selectedDailyCard {
+        border: 3px solid $default_border_color;
+        box-shadow: 0px 0px 15px 1px #000;
       }
     }
   }
 
   .hourlyResultsDiv {
-    background-color: lightgray;
+    .resultsContainer {
+      flex-wrap: nowrap;
+      overflow: auto;
+      gap: 10px;
+      width: 100%;
+      padding: 0px 10px;
+
+      .hourlyResultsCard {
+        border: 1px solid $default_border_color;
+        padding: 10px;
+        min-width: 210px;
+      }
+    }
   }
 }

@@ -1,8 +1,11 @@
 import { getDayOfTheWeek } from "../../utils";
 
-const DailyResultsCard = ({ date, info }) => {
+const DailyResultsCard = ({ date, info, isSelected, onClick }) => {
   return (
-    <div className="dailyResultsCard">
+    <div
+      className={`dailyResultsCard ${isSelected ? "selectedDailyCard" : ""}`}
+      onClick={onClick}
+    >
       <h5 className="heading">{getDayOfTheWeek(date)}</h5>
       {info.map((field) => (
         <p>

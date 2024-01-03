@@ -1,5 +1,4 @@
 const getDataInfo = (resultData, resulUnits, fields, useIndex = false) => {
-  console.log(useIndex);
   const getFieldInfo = (field) => {
     switch (field) {
       case "temperature_2m":
