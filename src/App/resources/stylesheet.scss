@@ -76,7 +76,8 @@ $default_border_color: #000;
 
       .inputs {
         float: right;
-        width: 60%;
+        width: 40vw;
+        max-width: 145px;
       }
 
       .buttons {
@@ -116,7 +117,7 @@ $default_border_color: #000;
 
     .currentResultCard {
       border: 1px solid $default_border_color;
-      width: 15%;
+      width: 30%;
       min-width: 90px;
       height: 70px;
       padding: 10px;
@@ -172,6 +173,17 @@ $default_border_color: #000;
         border: 1px solid $default_border_color;
         padding: 10px;
         min-width: 210px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 715px) {
+  .currentWeatherDiv {
+    .resultsContainer {
+      width: 100%;
+      .currentResultCard {
+        width: 15%;
       }
     }
   }
